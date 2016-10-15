@@ -2,6 +2,7 @@ package id.sch.smktelkom_mlg.xiirpl5038.pelamarankerja;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -34,5 +35,39 @@ public class MainActivity extends AppCompatActivity {
         spRe = (Spinner) findViewById(R.id.spinnerRe);
         butOK = (Button) findViewById(R.id.buttonOK);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
+
+        butOK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Clik();
+            }
+        });
+    }
+
+    private void Clik() {
+        if (isValid()) {
+
+        }
+    }
+
+    private boolean isValid() {
+        boolean valid = true;
+
+        String name = etNama.getText().toString();
+        String KTP = etKTP.getText().toString();
+        String no = etPhone.getText().toString();
+
+        if (name.isEmpty() || KTP.isEmpty() || no.isEmpty()) {
+            etNama.setError("Anda belum mengisi Name");
+            etKTP.setError("Anda belum mengisi KTP");
+            etPhone.setError("Anda belum mengisi Phone Number");
+            valid = false;
+        } else {
+            etNama.setError(null);
+            etKTP.setError(null);
+            etPhone.setError(null);
+        }
+        return valid;
+
     }
 }
