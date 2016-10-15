@@ -46,7 +46,29 @@ public class MainActivity extends AppCompatActivity {
 
     private void Clik() {
         if (isValid()) {
+            String nama = etNama.getText().toString();
+            String KTP = etKTP.getText().toString();
+            String phone = etPhone.getText().toString();
+            String hasil2 = "\nControlled Language:";
+            int startlen = hasil2.length();
 
+            String hasil = null;
+            if (rbM.isChecked()) {
+                hasil = rbM.getText().toString();
+            } else if (rbF.isChecked()) {
+                hasil = rbF.getText().toString();
+            }
+            if (cbID.isChecked()) hasil2 += cbID.getText() + ", ";
+            if (cbEN.isChecked()) hasil2 += cbEN.getText() + ", ";
+            if (cbMA.isChecked()) hasil2 += cbMA.getText() + ", ";
+            if (cbOT.isChecked()) hasil2 += cbOT.getText() + ", ";
+            if (hasil2.length() == startlen) hasil2 = "Anda Tidak Memiliki Keahlian Bahasa Asing ";
+
+            if (hasil == null) {
+                tvHasil.setText("You have not fill the forms gender and Language");
+            } else {
+                tvHasil.setText("Your Name: " + nama + "." + "\n" + "KTP: " + KTP + "." + "\n" + "Phone number: " + phone + "." + "\n" + "Gender: " + hasil + ".\nControlled Language: " + hasil2 + "." + "\n" + "Religion: " + spRe.getSelectedItem().toString() + ".");
+            }
         }
     }
 

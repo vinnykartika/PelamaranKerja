@@ -82,7 +82,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/dsn2"
-                android:hint="Phone Number" />
+                android:hint="Phone Number"
+                android:inputType="numberSigned" />
         </android.support.design.widget.TextInputLayout>
 
 
