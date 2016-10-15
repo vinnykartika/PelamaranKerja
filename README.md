@@ -1,4 +1,5 @@
 # PelamaranKerja
+Tema aplikasi ini adlah untuk mengisi form pelamaran kerja di Bank Indonesia. Pertama pengguna harus mengisi nama. Kedua pelanggan harus mengisi KTP. Ketiga pelanggan harus mengisi no handphone. Jika pada ketiga itu tidak diisikan maka akan ada validari. Keempat pengguna harus memilih gender. Kelima pengguna harus memilih keahlian bahasa. Jika Keahlian bahasa tidak dipilih maka akan tampil bahwa si pengguna tidak memiliki keahlian bahasa asing.Keenam pengguna harus mengisi agama. 
 ## Identitas
 *Nama : Vinny Kartika Alifiana
 *No : 38
